@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Projetos.Data;
+using Projetos.Models;
 
 namespace Projetos.database
 {
@@ -13,8 +14,9 @@ namespace Projetos.database
 
         public DbSet<User> Users {get; set;}
 
-        protected override void OnModelCreating(ModelBuilder builder) {
-            base.OnModelCreating(builder);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserMapping());
         }
     }
 }

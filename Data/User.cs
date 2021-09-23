@@ -9,7 +9,7 @@ namespace Projetos.Data
 {
     public class User
     {
-        public int id {get; set;}
-        public string name {get; set;}
+        public int idUser {get; set;}
+        public string nome {get; set;}
     }
 }
