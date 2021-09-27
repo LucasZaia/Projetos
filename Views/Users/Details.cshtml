@@ -1,7 +1,7 @@
 @model Projetos.Data.User
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Privacy Policy";
 }
 
 <!DOCTYPE html>
@@ -9,12 +9,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Detalhes</title>
 </head>
 <body>
 
 <div>
-    <h4>User</h4>
+    <h4>Usuário</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -26,8 +26,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.idUser">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.idUser">Editar</a> |
+    <a asp-action="Index">Voltar</a>
 </div>
 </body>
 </html>
