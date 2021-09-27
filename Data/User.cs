@@ -11,5 +11,8 @@ namespace Projetos.Data
     {
         public int idUser {get; set;}
         public string nome {get; set;}
+        public string senha {get; set;}
     }
+
+    
 }

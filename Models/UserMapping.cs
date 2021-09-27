@@ -15,6 +15,9 @@ namespace Projetos.Models
                 .HasKey(p => p.idUser);
             builder.Property(p => p.nome)
                 .HasMaxLength(50);
+            builder.Property(p => p.senha)
+                .HasMaxLength(100);
+                
         }
     }
 }

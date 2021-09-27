@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VpGNJES3a6xx0NgpDmz5KCH7M2JbPc7fGan1KDeDVOFl4fF3UTIu2xoJmp9StJi0B5Ej9R4sf8959XpE8oXg5w==",
+  "dgSpecHash": "GbxET9f29mvVTa52HhcT2mB3r2kRA7mlNwTIRe5y+nNKytss3GUYeSsjgTiSiFYmUagxXkSfOJNDoSP4VUy6fQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\SECADMODTI02\\Desktop\\Projetos\\Projetos.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\SECADMODTI02\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\SECADMODTI02\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\SECADMODTI02\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
     "C:\\Users\\SECADMODTI02\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

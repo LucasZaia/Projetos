@@ -18,9 +18,9 @@ namespace Projetos.Models
 
             var user = new User[]
             {
-                new User{nome="Lucas"},
-                new User{nome="Gabriel"},
-                new User {nome="Thiago"}
+                new User{nome="Lucas", senha="1234"},
+                new User{nome="Gabriel", senha="1234"},
+                new User {nome="Thiago", senha="1234"}
             };
 
             foreach(User u in user)

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projetos.Data;
 using Projetos.database;
+using BCrypt;
 
 namespace Projetos.Controllers
 {
@@ -54,8 +55,9 @@ namespace Projetos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("idUser,nome")] User user)
+        public async Task<IActionResult> Create([Bind("idUser,nome,senha")] User user)
         {
+            user.senha = BCrypt.Net.BCrypt.HashPassword(user.senha);
             if (ModelState.IsValid)
             {
                 _context.Add(user);
