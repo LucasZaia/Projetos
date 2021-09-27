@@ -1,4 +1,5 @@
 using System;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Projetos.Models;
 using Projetos.database;
+using Projetos.Data;
 
 namespace Projetos
 {
@@ -16,18 +18,34 @@ namespace Projetos
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
 
-
-            PopulaBd pop = new PopulaBd();
             
+            if(CreateDbIfnotExists(host)){
+                Console.WriteLine("conexão realizada");
+            }else{
+                Console.WriteLine("Erro");
+            }
 
+            host.Run();
+            
         }
 
-        private static void insertU()
-        {
-           
+        private static Boolean CreateDbIfnotExists(IHost host) {
+            using (var scope = host.Services.CreateScope()) {
+                var services = scope.ServiceProvider;
 
+                try {
+                    var context = services.GetRequiredService<DbProvider>();
+                    PopulaBd  bd = new PopulaBd();
+                    bd.inserir(context);
+                    return true;
+                }catch (Exception e){
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(e, "Erro ao criar Base de dados ");
+                    return false;
+                }
+            }
         }
 
 

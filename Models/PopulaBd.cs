@@ -12,7 +12,6 @@ namespace Projetos.Models
         public void inserir(DbProvider context)
         {
             context.Database.EnsureCreated();
-
             if (context.Users.Any()) {
                 return;
             }
@@ -20,7 +19,8 @@ namespace Projetos.Models
             var user = new User[]
             {
                 new User{nome="Lucas"},
-                new User{nome="Gabriel"}
+                new User{nome="Gabriel"},
+                new User {nome="Thiago"}
             };
 
             foreach(User u in user)

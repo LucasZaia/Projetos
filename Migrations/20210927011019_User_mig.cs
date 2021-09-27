@@ -2,7 +2,7 @@
 
 namespace Projetos.Migrations
 {
-    public partial class tgy : Migration
+    public partial class User_mig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

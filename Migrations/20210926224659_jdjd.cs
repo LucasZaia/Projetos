@@ -3,7 +3,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace Projetos.Migrations
 {
-    public partial class teste : Migration
+    public partial class jdjd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

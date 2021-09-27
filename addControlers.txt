@@ -1,0 +1,1 @@
+dotnet aspnet-codegenerator --project "C:\Users\Lucas Zaia\Projetos" controller --force --controllerName UsersController --model Projetos.Data.User --dataContext Projetos.database.DbProvider --relativeFolderPath Controllers --controllerNamespace Projetos.Controllers

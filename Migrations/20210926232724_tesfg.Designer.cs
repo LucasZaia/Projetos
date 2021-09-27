@@ -8,8 +8,8 @@ using Projetos.database;
 namespace Projetos.Migrations
 {
     [DbContext(typeof(DbProvider))]
-    [Migration("20210924104136_teste")]
-    partial class teste
+    [Migration("20210926232724_tesfg")]
+    partial class tesfg
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
