@@ -12,14 +12,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <div class="input-group mb-3">
-                <span class="input-group-text material-icons" id="basic-addon1">face</span>
-                <input type="text" asp-for="nome" class="form-control" placeholder="Insira seu Nome" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text material-icons" id="basic-addon1">face</span>
+                        <input type="text" asp-for="nome" class="form-control" placeholder="Insira seu Nome" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                 </div>
                 <span asp-validation-for="nome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 
-                <input type="submit" value="Adicionar" class="btn btn-primary" />
+                <button type="submit" value="Adicionar" class="btn btn-primary"><span class="material-icons" id="basic-addon1">add</span> Adicionar</button>
             </div>
         </form>
     </div>
